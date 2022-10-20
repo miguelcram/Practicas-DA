@@ -17,6 +17,7 @@
 RAND_TYPE SimpleRandomGenerator::a;
 #endif
 
+// CAMBIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS PRUEBA
 using namespace Asedio;
 
 // Devuelve la posición en el mapa del centro de la celda (i,j)
