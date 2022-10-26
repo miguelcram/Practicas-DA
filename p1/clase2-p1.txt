@@ -1,0 +1,23 @@
+/* ALGORITMO VORAZ P1 */
+/*  Crear una estructura para almacenar los valores de las celdas */
+    /* rellenar adecuadamente*/
+    for(j=0 ..... )
+    {
+        for(i=0 ......)
+        {
+            Estructura[i][j] = cellValue(i,j,....)
+        }
+    }
+
+    /* Por cada defensa... */
+    while(currentDefense = defensa.end())
+    {
+        /* Llamar a selección */
+        posibleCelda = Seleccion(-------------)
+
+        if(factible(posibleCelda, (*currentDefense), ....))
+        {
+            (*currentDefense)->position = CellCenterToPosition(posibleCelda.fila, posibleCelda.col, ....)
+            ++currentDefense;
+        }
+    }

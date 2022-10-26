@@ -51,18 +51,18 @@ bool factibilidad(Vector3 posiblePosicion, Defense *miDefensa, bool** freeCells,
     (posiblePosicion.y + miDefensa->radio > 60 || posiblePosicion.y - miDefensa->radio < 0))
         esFactible = false;
     // Que choque con un obstaculo: que la suma de los radios sea menor que la distancia entre los puntos
-    List<obstacles*>::iterator currentObstacle = obstacles.begin();
-    while(currentObstacle != obstacles.end() && esFactible){
+    List<obstacles*>::iterator currentObstaculo = obstacles.begin();
+    while(currentObstaculo != obstacles.end() && esFactible){
         if(_distance(posiblePosicion, (*currentObstaculo)->position) < miDefensa->radio + (*currentObstaculo)->radio)
             esFactible = false;
         ++currentObstaculo;
     }
     // Que choque con otra defensa
-    List<Defense*>::iterator currentDefense = defenses.begin();
-    while(currentDefense != defenses.end() && esFactible){
+    List<Defense*>::iterator currentDefensa = defenses.begin();
+    while(currentDefensa != defenses.end() && esFactible){
         if(_distance(posiblePosicion, (*currentObstaculo)->position) < miDefensa->radio + (*currentObstaculo)->radio)
             esFactible = false;
-        ++currentDefense;
+        ++currentDefensa;
     }
 
     return esFactible;
